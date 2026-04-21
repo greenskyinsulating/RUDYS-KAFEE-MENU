@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudy's Kafee | Menú Digital</title>
+    <link rel="stylesheet" href="style.css?v=13">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar modo oscuro">🌙</button>
+
+    <header class="header">
+        <div class="nav-content">
+            <div class="logo-area">
+                <img src="LogoPNG.png" alt="Rudy's Kafee" class="logo-imagen">
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html">Menús</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+
+            <div class="tabs-container">
+                <button class="tab-btn active" onclick="openTab(event, 'comida')">COMIDA</button>
+                <button class="tab-btn" onclick="openTab(event, 'bebidas')">BEBIDAS</button>
+                <button class="tab-btn" onclick="openTab(event, 'extras')">EXTRAS</button>
+            </div>
+            
+            <div id="comida" class="tab-content active">
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 12px; background-color: var(--color-caja); padding: 8px 20px; border-radius: 25px; max-width: fit-content; margin: 0 auto 30px auto; transition: background-color 0.4s ease;">
+                <img src="LogoSinTexto.png" alt="Especialidad Rudy's" style="width: 25px; height: 25px; object-fit: contain;">
+                <span style="font-size: 0.85rem; color: var(--color-carbon); font-weight: 600; transition: color 0.4s ease;">
+                    Son especialidad de la casa
+                </span>
+            </div>
+
+            <h2 class="section-title">ENTREES</h2>
+            <hr class="divider">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="entrees/BowlFrutas.jpeg" alt="Bowl de Frutas"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Bowl de Frutas</h3><p class="item-desc">Fruta de temporada, yogurt griego, granola y miel de abeja.</p><span class="item-price">145.00</span></div>
+                    </div>
+                   <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="entrees/Rollitos.jpeg" alt="Samplers Salé Volován"></div> 
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">
+                                Samplers Salado Volován
+                                <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa">
+                            </h3>
+                            <p class="item-desc">Pepino con salmón y tzatziki. <br> Jamón y queso crema. <br> Champiñones con queso gouda y ensalada de morrones. <br> Pesto, tomates cherry y mozzarella. <br> 2 c/u </p>
+                            <span class="item-price">245.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="entrees/RollitoDulce.jpeg" alt="Samplers Sucré Volován"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">
+                                Samplers Dulce Volován
+                                <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa">
+                            </h3>
+                            <p class="item-desc">Nutella, avellana y merengue. <br> Pastelera de frutos rojos, mermelada de la casa y menta. <br> Matcha-coco, chocolate y ajonjolí negro. <br> Crema pastelera de café, fresa y caramelo.<br> 2 c/u </p>
+                            <span class="item-price">235.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-spacing"></div>
+
+                <h2 class="section-title">ENSALADAS</h2>
+                <hr class="divider">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="ensaladas/EnsaladaManzana.jpeg" alt="Ensalada de Manzana"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Ensalada de Manzana</h3><p class="item-desc">Espinacas baby, pepino, arándanos, manzana Granny Smith, cebolla morada y nuez caramelizada.</p><span class="item-price">175.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="ensaladas/EnsaladaCol.jpeg" alt="Choux de Bruxelles"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">
+                                Coles de Bruselas Rudy's
+                                <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa">
+                            </h3>
+                            <p class="item-desc">Coles de bruselas, queso de cabra, almendra fileteada, jugo de limón y reducción balsámica.</p>
+                            <span class="item-price">195.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="ensaladas/EnsaladaPollo.jpeg" alt="Ensalada Cesar"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Ensalada Cesar</h3><p class="item-desc">Corazónes de lechuga romana, aderezo césar de la casa, morrones preparados, parmesano, crotones y pollo a la plancha.</p><span class="item-price">210.00</span></div>
+                    </div>
+                </div>
+                
+                <div class="category-spacing"></div>
+
+                <h2 class="section-title">BRUNCH</h2>
+                <p style="color: #777; font-size: 0.95rem; margin-top: -5px; margin-bottom: 10px;">7 am a 2 pm</p>
+                <hr class="divider">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper">
+                            <div class="mini-carrusel">
+                                <img src="huevos/EstrelladoTocino.jpeg" alt="Eggs Le Gout" class="slide-0">
+                                <img src="huevos/PapaRalladaTocino.jpeg" alt="Eggs Le Gout" class="slide-1">
+                                <img src="huevos/RevueltoConTocino.jpeg" alt="Eggs Le Gout" class="slide-2">
+                            </div>
+                        </div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Huevos al Gusto</h3><p class="item-desc">Huevo revuelto, estrellado, jamón. <br> Acompañado de papa hash brown, aguacate y tocino.</p><span class="item-price">190.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/OmeletteChampinon.jpeg" alt="Omelette"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Omelette</h3><p class="item-desc">Omelette con champiñones, acompañado con queso gouda, ensalada de kale con morrones preparados, papa hash brown.</p><span class="item-price">180.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/OmeletteClaras.jpeg" alt="Omelette Claras"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Omelette de Claras</h3><p class="item-desc">Omelette de claras acompañado de espinaca baby, tomate cherry, aguacate, tocino.</p><span class="item-price">180.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/ChilaquilesPollo.jpeg" alt="Chilaquiles Verts"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Chilaquiles Verdes</h3><p class="item-desc">Totopos crujientes, salsa verde, queso gouda, cebolla morada, cilantro, crema ácida, pollo a la plancha.</p><span class="item-price">185.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/ChilaquilesPolloRojos.jpeg" alt="Chilaquiles Rouges"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Chilaquiles Chipotle</h3><p class="item-desc">Totopos crujientes, salsa roja de chipotle, queso gouda, cebolla morada, cilantro, crema ácida, pollo a la plancha.</p><span class="item-price">185.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/Quiche.jpg" alt="Quiche"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Quiche</h3><p class="item-desc">Tarta de masa quebrada, huevos, crema, tocino, jamón, queso gouda.</p><span class="item-price">190.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/HuevosShak.jpeg" alt="Huevos Rudys"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Huevos Shakshuka Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa"></h3><p class="item-desc">Salsa de tomate, cebolla, morrones, huevo estrellado, hogaza de mantequilla compuesta.</p><span class="item-price">215.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="brunch/PanHuevo.jpeg" alt="Croque Madame"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Croque Madame</h3><p class="item-desc">Pan brioche, jamón de pierna, queso gouda, mostaza Dijon, salsa blanca, huevo estrellado.</p><span class="item-price">220.00</span></div>
+                    </div>
+                    
+                </div>
+                
+                <div class="category-spacing"></div>
+
+                <h2 class="section-title">TOAST</h2>
+                <hr class="divider">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="toast/ToastHuevo.jpeg" alt="Avocat Toast"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Avocado Toast</h3><p class="item-desc">Hogaza chipotle, aguacate, tocino, huevo estrellado, salsa macha.</p><span class="item-price">175.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="toast/SaumonToast.jpg" alt="Saumon Toast"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Salmón Toast Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa"></h3><p class="item-desc">Hogaza, salmón ahumado, aguacate, pepino, cebolla morada, tzatziki.</p><span class="item-price">220.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="toast/ToastSerrano.jpeg" alt="Serrano Toast"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Serrano Toast</h3><p class="item-desc">Hogaza, jamón serrano, pesto de albahaca, pepino, mozzarella fresco, arúgula.</p><span class="item-price">185.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="french/ToastRojos.jpeg" alt="Fruits Rouges Toast"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Frutos Rojos Toast</h3><p class="item-desc">Hogaza de arándano, queso crema, frutos rojos, almendra fileteada, miel de abeja.</p><span class="item-price">175.00</span></div>
+                    </div>
+                </div>
+                
+                <div class="category-spacing"></div>
+
+                <h2 class="section-title">CRUMBLE FRENCH TOAST</h2>
+                <hr class="divider">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="french/FrenchMatcha.jpeg" alt="French Toast Matcha"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">French Toast Matcha</h3><p class="item-desc">Pan brioche, crema pastelera de coco, crumble de coco, nibs de cacao.</p><span class="item-price">175.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="french/FrenchCherry.jpeg" alt="French Toast Cherry Blossom"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">French Toast Cherry Blossom</h3><p class="item-desc">Pan brioche, crema pastelera de frutos rojos, mermelada de la casa, azúcar glass.</p><span class="item-price">185.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="french/FrenchRudys.jpeg" alt="French Toast Rudy's"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">French Toast Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa"></h3><p class="item-desc">Pan brioche, crema pastelera de café, caramelo, chocolate semiamargo, merengue suizo.</p><span class="item-price">185.00</span></div>
+                    </div>
+                </div>
+                
+                <div class="category-spacing"></div>
+
+                <h2 class="section-title">SANDWICH</h2>
+                <hr class="divider">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="sandwich/CuernitoJamon.jpeg" alt="Croissant de Jamon"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Croissant de Jamón</h3><p class="item-desc">Jamón de pierna, queso gouda, tomate bola, lechuga, aioli de romero.</p><span class="item-price">180.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="sandwich/CuernitoEspinaca.jpeg" alt="Croissant Campresse"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Croissant Caprese</h3><p class="item-desc">Pesto de tomate, tomate bola, mozzarella fresco, espinacas.</p><span class="item-price">175.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="sandwich/CuernitoHuevoEstrellado.jpeg" alt="Croissant Corned Beef"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Croissant Corned Beef</h3><p class="item-desc">Corned beef, queso gouda, huevo estrellado, aioli de ajo frito.</p><span class="item-price">230.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="sandwich/SandwichPollo.jpeg" alt="Panini Rudy"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Panini Rudy <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa"></h3><p class="item-desc">Pechuga de pollo a la plancha, queso gouda, champiñones, morrones preparados, lechuga.</p><span class="item-price">200.00</span></div>
+                    </div>
+                     <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="sandwich/CroqueMonsieur.jpeg" alt="Croque Monsieur"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Croque Monsieur</h3><p class="item-desc">Pan brioche, jamón de pierna, queso gouda, mostaza Dijon, salsa blanca.</p><span class="item-price">210.00</span></div>
+                    </div>
+                </div>
+                
+                <div class="category-spacing"></div>
+
+                <h2 class="section-title">BAKERY</h2>
+                <hr class="divider">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="pan/MiniPancakes.jpeg" alt="Pancakes Rudy's"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Mini Pancakes</h3><p class="item-desc">Mini pancakes, mantequilla avellanada, miel de maple, mermelada de la casa.</p><span class="item-price">160.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper">
+                            <div class="mini-carrusel">
+                                <img src="roles/RolCajeta.jpeg" alt="Roles de Canela" class="slide-0">
+                                <img src="roles/RolRojos.jpeg" alt="Roles de Canela" class="slide-1">
+                                <img src="roles/RolNutella.jpeg" alt="Roles de Canela" class="slide-2">
+                            </div>
+                        </div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Roles de Canela</h3><p class="item-desc">Frutos rojos: cobertura de queso crema, compota de frutos rojos. <br> Nutella: cobertura de queso crema, nuez, nutella. <br> Cajeta: cobertura de queso crema, nuez, cajeta.</p><span class="item-price">100.00</span></div>
+                    </div>
+                </div>
+                
+                <div class="category-spacing"></div>
+
+                <h2 class="section-title">DESSERTS</h2>
+                <hr class="divider">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="postres/Pannacotta.jpeg" alt="Pannacotta"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Pannacotta Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa"></h3><p class="item-desc">Pannacotta de café, caramelo, frutos rojos, hojas de menta.</p><span class="item-price">165.00</span></div>
+                   </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="postres/Afogatto.jpeg" alt="Afogatto"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Affogato</h3><p class="item-desc">Bola de nieve de vainilla acompañado de shot de espresso.</p><span class="item-price">120.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="postres/Brownie.jpeg" alt="Brownie"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name" style="display: flex; align-items: center; gap: 8px;">Brownie Artesanal Rudy's <img src="LogoSinTexto.png" alt="Especialidad" style="width: 22px; height: 22px; object-fit: contain;" title="Especialidad de la casa"></h3><p class="item-desc">Acompañado de una bola de nieve con caramelo.</p><span class="item-price">110.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper">
+                            <div class="mini-carrusel">
+                                <img src="galletas/ChocoChip.jpeg" alt="Galletas" class="slide-0">
+                                <img src="galletas/ChocoMatcha.jpeg" alt="Galletas" class="slide-1">
+                                <img src="galletas/GalletaMatcha.jpeg" alt="Galletas" class="slide-2">
+                            </div>
+                        </div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Galletas NY</h3><p class="item-desc">Chocolate chip. <br> Chocolate chip matcha. <br> Matcha.</p><span class="item-price">95.00</span></div>
+                    </div>
+                </div>
+
+            </div> <div id="bebidas" class="tab-content">
+                
+                <h2 class="section-title">HOT DRINKS</h2>
+                <hr class="divider">
+
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/Capuchino.jpeg" alt="Capuchino"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Capuchino</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 82.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 93.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/Chocolate.jpeg" alt="Chocolate"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Chocolate</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 82.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 93.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/Americano.jpeg" alt="Americano"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Americano</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 76.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 87.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/Espresso.jpeg" alt="Espresso"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Espresso</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">75.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">Acompañado de agua mineral</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-spacing"></div>
+
+                <h3 class="sub-section-title">Lattes</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/Latte.jpeg" alt="Latte"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Latte</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 82.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 93.00</span>
+                        </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/LatteVainilla.jpeg" alt="Latte Vainilla"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Latte Vainilla</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 82.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 93.00</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/LatteCaramelo.jpeg" alt="Latte Caramelo"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Latte Caramelo</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 82.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 93.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/LatteAvellana.jpeg" alt="Latte Avellana"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Latte Avellana</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 82.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 93.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="sub-section-title">Mochas</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/MochaOscuro.jpeg" alt="Mocha Oscuro"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Mocha Oscuro</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 82.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 93.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/MochaBlanco.jpeg" alt="Mocha Blanco"></div>
+                        <div class="item-text-wrapper">
+                            <h3 class="item-name">Mocha Blanco</h3>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">11 OZ: 82.00</span>
+                            <span class="item-price" style="display: block; font-size: 0.9rem;">16 OZ: 93.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-spacing"></div>
+                <h2 class="section-title">COLD DRINKS</h2>
+                <hr class="divider">
+
+                <h3 class="sub-section-title">Frappes</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><div class="item-image-wrapper"><img src="frias/FrappeClasico.jpeg" alt="Frappe Clasico"></div><div class="item-text-wrapper"><h3 class="item-name">Frappe Clasico</h3><span class="item-price">103.00</span></div></div>
+                    <div class="menu-item"><div class="item-image-wrapper"><img src="frias/FrappeVainilla.jpeg" alt="Frappe Vainilla"></div><div class="item-text-wrapper"><h3 class="item-name">Frappe Vainilla</h3><span class="item-price">103.00</span></div></div>
+                    <div class="menu-item"><div class="item-image-wrapper"><img src="frias/FrappeOreo.jpeg" alt="Frappe Oreo"></div><div class="item-text-wrapper"><h3 class="item-name">Frappe Oreo</h3><span class="item-price">103.00</span></div></div>
+                    <div class="menu-item"><div class="item-image-wrapper"><img src="frias/FrappeMochaOscuro.jpeg" alt="Frappe Mocha Oscuro"></div><div class="item-text-wrapper"><h3 class="item-name">Frappe Mocha Oscuro</h3><span class="item-price">103.00</span></div></div>
+                    <div class="menu-item"><div class="item-image-wrapper"><img src="frias/FrappeMochaBlanco.jpeg" alt="Frappe Mocha Blanco"></div><div class="item-text-wrapper"><h3 class="item-name">Frappe Mocha Blanco</h3><span class="item-price">103.00</span></div></div>
+                    <div class="menu-item"><div class="item-image-wrapper"><img src="frias/FrappeMazapan.jpeg" alt="Frappe Mazapan"></div><div class="item-text-wrapper"><h3 class="item-name">Frappe Mazapan</h3><span class="item-price">103.00</span></div></div>
+                    <div class="menu-item"><div class="item-image-wrapper"><img src="frias/FrappeCaramelo.jpeg" alt="Frappe Caramelo"></div><div class="item-text-wrapper"><h3 class="item-name">Frappe Caramelo</h3><span class="item-price">103.00</span></div></div>
+                    <div class="menu-item"><div class="item-image-wrapper"><img src="frias/FrappeAvellana.jpeg" alt="Frappe Avellana"></div><div class="item-text-wrapper"><h3 class="item-name">Frappe Avellana</h3><span class="item-price">103.00</span></div></div>
+                </div>
+
+               <h3 class="sub-section-title">Lattes</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/LatteClasico.jpeg" alt="Latte Frio Regular"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Latte Frio Regular</h3><span class="item-price">82.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/LatteFrioVainilla.jpeg" alt="Latte Frio Vainilla"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Latte Frio Vainilla</h3><span class="item-price">87.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/LatteFrioAvellana.jpeg" alt="Latte Frio Avellana"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Latte Frio Avellana</h3><span class="item-price">87.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/LatteCaramelo.jpeg" alt="Latte Frio Caramelo"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Latte Frio Caramelo</h3><span class="item-price">87.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/LatteBlanco.jpeg" alt="Latte Frio Mocha Blanco"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Latte Frio Mocha Blanco</h3><span class="item-price">87.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/LatteOscuro.jpeg" alt="Latte Frio Mocha Oscuro"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Latte Frio Mocha Oscuro</h3><span class="item-price">87.00</span></div>
+                    </div>
+                </div>
+
+               <div class="category-spacing"></div>
+                <h2 class="section-title">NON-COFFEE</h2>
+                <hr class="divider">
+
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/FresaMora.jpeg" alt="Refresher Berry Garden"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Refresher Berry Garden</h3><span class="item-price">87.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/CerezaMora.jpeg" alt="Refresher Cherry Blackberry"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Refresher Cherry Blackberry</h3><span class="item-price">87.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/Mango.jpeg" alt="Refresher Mango Peach"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Refresher Mango Peach</h3><span class="item-price">87.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/LimonadaFresa.jpeg" alt="Limonada Mineral de Fresa"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Limonada Mineral de Fresa</h3><span class="item-price">82.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/Naranjada.jpeg" alt="Jugo de Naranja"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Jugo de Naranja</h3><span class="item-price">97.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/CocaCola.jpeg" alt="CocaCola"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Coca Cola 235 ml</h3><span class="item-price">49.00</span></div>
+                    </div>
+                 </div>
+
+                 <div class="category-spacing"></div>
+
+                <h3 class="sub-section-title">Tizanas</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/Fresa-Kiwi.jpeg" alt="Tizana Fresa Kiwi"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Tizana Fresa Kiwi</h3><span class="item-price">89.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/CocoArandano.jpeg" alt="Tizana Coco Arandano"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Tizana Coco Arandano</h3><span class="item-price">89.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="calientes/FrutosBosque.jpeg" alt="Tizana Frutos del Bosque"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Tizana Frutos del Bosque</h3><span class="item-price">89.00</span></div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/FresaKiwiFria.jpeg" alt="Tizana Fresa Kiwi Fria"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Tizana Fresa Kiwi Fria</h3><span class="item-price">89.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/CocoArandanoFria.jpeg" alt="Tizana Coco Arandano Fria"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Tizana Coco Arandano Fria</h3><span class="item-price">89.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/FrutosBosqueFria.jpeg" alt="Tizana Frutos del Bosque Fria"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Tizana Frutos del Bosque Fria</h3><span class="item-price">89.00</span></div>
+                    </div>
+                </div>
+
+                 <div class="category-spacing"></div>
+                <h2 class="section-title">AGUAS</h2>
+                <hr class="divider">
+
+                <div class="menu-grid">
+                <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/Saratoga.jpg" alt="Saratoga"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Agua Saratoga 828 ml</h3><span class="item-price">99.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/SaratogaMineral.jpg" alt="Saratoga"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Agua Saratoga Carbonatada 828 ml</h3><span class="item-price">99.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/SaratogaChica.jpg" alt="Saratoga"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Agua Saratoga 355 ml</h3><span class="item-price">58.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image-wrapper"><img src="frias/Evian.jpg" alt="Evian"></div>
+                        <div class="item-text-wrapper"><h3 class="item-name">Agua Evian 330 ml</h3><span class="item-price">58.00</span></div>
+                    </div>                    
+                </div>
+
+               </div> <div id="extras" class="tab-content">
+                <h2 class="section-title">EXTRAS</h2>
+                <hr class="divider">
+
+                <div class="extras-container">
+                    <h3 class="sub-section-title">Para tus Platillos</h3>
+                    
+                    <div class="extra-item">
+                        <span class="extra-name">Huevo</span>
+                        <span class="extra-price">15.00</span>
+                    </div>
+                    <div class="extra-item">
+                        <span class="extra-name">Aguacate</span>
+                        <span class="extra-price">25.00</span>
+                    </div>
+                    <div class="extra-item">
+                        <span class="extra-name">Tocino</span>
+                        <span class="extra-price">35.00</span>
+                    </div>
+                    <div class="extra-item">
+                        <span class="extra-name">Pollo</span>
+                        <span class="extra-price">45.00</span>
+                    </div>
+
+                    <div class="category-spacing"></div>
+
+                    <h3 class="sub-section-title">Para tus Bebidas / Postres</h3>
+                     <div class="extra-item">
+                        <span class="extra-name">Leche Extra</span>
+                        <span class="extra-price">12.00</span>
+                    </div>
+                    <div class="extra-item">
+                        <span class="extra-name">Leche de Almendra</span>
+                        <span class="extra-price">18.00</span>
+                    </div>
+                    <div class="extra-item">
+                        <span class="extra-name">Leche de Soya</span>
+                        <span class="extra-price">18.00</span>
+                    </div>
+                    <div class="extra-item">
+                        <span class="extra-name">Crema Batida</span>
+                        <span class="extra-price">12.00</span>
+                    </div>
+                    
+                    <div class="extra-item">
+                        <span class="extra-name">Bola de Helado</span>
+                        <span class="extra-price">30.00</span>
+                    </div>
+                    <div class="extra-item">
+                        <span class="extra-name">Shot Espresso</span>
+                        <span class="extra-price">25.00</span>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-column">
+                <h4 class="footer-title">Contacto</h4>
+                <p class="footer-text" style="font-weight: bold; color: #fff;">656 - 634 - 9776</p>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-title">Ubicación</h4>
+                <p class="footer-text">Av. Ejército Nacional #6151-1</p>
+                <p class="footer-text">Plaza Real, Ciudad Juárez, Chih.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-title">Síguenos</h4>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100089935731811" target="_blank">
+                        <img src="LogoFB.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 por RUDY'S KAFEE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu de hamburguesa para celular
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Pestanas del menu y tema de las bebidas
+        function openTab(evt, tabName) {
+            let tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            let tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+
+            // --- MAGIA: CAMBIO DE TEMA VISUAL A BEBIDAS ---
+            if (tabName === 'bebidas') {
+                document.body.classList.add('theme-bebidas');
+            } else {
+                document.body.classList.remove('theme-bebidas');
+            }
+        }
+
+        // Modo oscuro
+        const themeToggle = document.getElementById('themeToggle');
+        
+        themeToggle.addEventListener('click', () => {
+            // Activar y desactivar modo oscuro
+            document.body.classList.toggle('dark-mode');
+            
+            // Iconos del modo oscuro
+            if(document.body.classList.contains('dark-mode')) {
+                themeToggle.innerText = '☀️';
+            } else {
+                themeToggle.innerText = '🌙';
+            }
+        });
+    </script>
+</body>
+</html>
