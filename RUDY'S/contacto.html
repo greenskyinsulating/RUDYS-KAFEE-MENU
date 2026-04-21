@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Rudy's Kafee</title>
+    <link rel="stylesheet" href="style.css?v=13">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar modo oscuro">🌙</button>
+
+    <header class="header">
+        <div class="nav-content">
+            <div class="logo-area">
+                <a href="index.html"><img src="LogoPNG.png" alt="Rudy's Kafee" class="logo-imagen"></a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html">Menús</a></li>
+                    <li><a href="contacto.html" style="color: var(--color-turquesa); font-weight: bold;">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+            
+            <h2 class="section-title" style="text-align: center;">CONTÁCTANOS</h2>
+            <hr class="divider" style="margin-left: auto; margin-right: auto; width: 100px;">
+            <p style="text-align: center; color: var(--color-desc); margin-bottom: 40px;">¡Nos encantaría escucharte! Visítanos o síguenos en nuestras redes sociales.</p>
+
+            <div class="menu-grid">
+                
+                <div class="menu-item" style="padding: 30px; text-align: center; align-items: center;">
+                    <h3 class="item-name" style="font-size: 1.5rem; color: var(--color-turquesa);">📍 Ubicación</h3>
+                    <p class="item-desc" style="font-size: 1.1rem; margin-top: 10px;">
+                        
+                        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Ejército+Nacional+6151-1,+Plaza+Real" target="_blank" style="color: var(--color-carbon); text-decoration: none; font-weight: bold; transition: color 0.3s ease;">
+                            Av. Ejército Nacional #6151-1<br>
+                            En Plaza Real 
+                        </a><br><br>
+                        
+                        <span style="font-size: 0.85rem; color: var(--color-turquesa);">👆 Toca para abrir el mapa</span>
+                    </p>
+                </div>
+
+                <div class="menu-item" style="padding: 30px; text-align: center; align-items: center;">
+                    <h3 class="item-name" style="font-size: 1.5rem; color: var(--color-amarillo);">☎️ Número de Teléfono</h3>
+                    <p class="item-desc" style="font-size: 1.1rem; margin-top: 10px;">
+                        <span style="color: var(--color-carbon); font-weight: bold; font-size: 1.3rem;">656-634-9776</span><br><br>
+                        <span style="font-size: 0.95rem; color: var(--color-desc);">Atención telefónica de:</span><br>
+                        7:00 am - 10:00 pm
+                    </p>
+                </div>
+
+                <div class="menu-item" style="padding: 30px; text-align: center; align-items: center;">
+                    <h3 class="item-name" style="font-size: 1.5rem; color: var(--color-rojo);">📱 Redes Sociales</h3>
+                    <p class="item-desc" style="font-size: 1.1rem; margin-top: 10px; margin-bottom: 15px;">
+                        Rudy's Kafee
+                    </p>
+
+                    <div style="display: flex; justify-content: center; gap: 15px;">
+                        <a href="https://www.facebook.com/profile.php?id=100089935731811" target="_blank" style="transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="LogoFB.png" alt="Facebook Rudy's Kafee" style="width: 50px; height: 50px; object-fit: contain;">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 RUDY'S KAFEE. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Menú Hamburguesa
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modo Oscuro
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if(document.body.classList.contains('dark-mode')) {
+                themeToggle.innerText = '☀️';
+            } else {
+                themeToggle.innerText = '🌙';
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
